@@ -1,0 +1,145 @@
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top,
+    #0b1a2a 0%,
+    #07111c 45%,
+    #050b12 100%
+  );
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(120, 170, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 170, 255, 0.05) 1px, transparent 1px);
+  background-size: 180px 180px;
+  opacity: 0.9;
+  animation: gridMove 35s linear infinite;
+}
+
+@keyframes gridMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(180px);
+  }
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.18;
+}
+
+.g1 {
+  width: 420px;
+  height: 420px;
+  background: #3b82f6;
+  top: -150px;
+  left: -120px;
+}
+
+.g2 {
+  width: 380px;
+  height: 380px;
+  background: #60a5fa;
+  bottom: -150px;
+  right: -120px;
+}
+
+.g3 {
+  width: 260px;
+  height: 260px;
+  background: #2563eb;
+  left: 55%;
+  top: 30%;
+}
+
+.g4 {
+  width: 220px;
+  height: 220px;
+  background: #1d4ed8;
+  left: 20%;
+  bottom: 15%;
+}
+
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #93c5fd;
+  box-shadow:
+    0 0 12px rgba(147, 197, 253, 0.8),
+    0 0 22px rgba(59, 130, 246, 0.6);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.d1 {
+  top: 22%;
+  left: 18%;
+}
+.d2 {
+  top: 30%;
+  left: 72%;
+  animation-delay: 1s;
+}
+.d3 {
+  top: 62%;
+  left: 55%;
+  animation-delay: 2s;
+}
+.d4 {
+  top: 80%;
+  left: 25%;
+  animation-delay: 3s;
+}
+.d5 {
+  top: 48%;
+  left: 85%;
+  animation-delay: 1.5s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.8);
+  }
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: radial-gradient(
+    circle at center,
+    rgba(147, 197, 253, 0.35) 0.5px,
+    transparent 0.7px
+  );
+  background-size: 8px 8px;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle,
+    transparent 45%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}

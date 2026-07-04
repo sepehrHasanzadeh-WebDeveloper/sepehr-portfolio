@@ -1,0 +1,363 @@
+.about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 100px 8%;
+  gap: 30px;
+  isolation: isolate;
+}
+
+.leftCard {
+  flex: 1;
+  padding: 25px;
+
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.02),
+    0 20px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.avatarBox {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: radial-gradient(
+    circle,
+    rgba(30, 91, 255, 0.25),
+    rgba(139, 92, 246, 0.2)
+  );
+  box-shadow:
+    0 0 35px rgba(30, 91, 255, 0.3),
+    0 0 70px rgba(139, 92, 246, 0.2);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact {
+  display: flex;
+  gap: 14px;
+}
+
+.contact a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(120, 170, 255, 0.2);
+  color: #cfe3ff;
+  transition: 0.3s;
+}
+
+.contact a:hover {
+  background: rgba(30, 91, 255, 0.15);
+  box-shadow: 0 0 18px rgba(30, 91, 255, 0.35);
+  transform: translateY(-3px);
+}
+
+.right {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #e6f0ff;
+  text-align: center;
+}
+
+.glassBox {
+  padding: 18px 20px;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.02),
+    0 20px 60px rgba(0, 0, 0, 0.35);
+  line-height: 1.6;
+}
+
+.glassBox span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(30, 91, 255, 0.15);
+  border: 1px solid rgba(30, 91, 255, 0.25);
+  color: #cfe3ff;
+  font-size: 13px;
+}
+.about::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle,
+    rgba(30, 90, 255, 0.493),
+    transparent 70%
+  );
+
+  filter: blur(60px);
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.stackItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(30, 91, 255, 0.15);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.stackItem img {
+  width: 34px;
+  height: 34px;
+  filter: drop-shadow(0 0 6px rgba(30, 91, 255, 0.25));
+  transition: 0.3s ease;
+}
+.status_me {
+  text-align: center;
+  padding: 10px 19px;
+  margin: 10px 0;
+  color: rgba(0, 255, 136, 0.85);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-radius: 25px;
+  border: 1px solid rgba(30, 91, 255, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.02),
+    0 20px 60px rgba(0, 0, 0, 0.35);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+.stackItem span {
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(230, 240, 255, 0.7);
+}
+
+.stackItem:hover {
+  transform: translateY(-4px);
+  background: rgba(30, 91, 255, 0.08);
+  border: 1px solid rgba(30, 91, 255, 0.3);
+  box-shadow: 0 0 25px rgba(30, 91, 255, 0.2);
+}
+.current_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 5px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.stackItem:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(30, 91, 255, 0.5));
+}
+
+@media (max-width: 1024px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 5%;
+    gap: 30px;
+  }
+
+  .leftCard,
+  .right {
+    width: 100%;
+    flex: unset;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+
+  .stackGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .about::before {
+    width: 450px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 5%;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
+  .leftCard {
+    padding: 22px;
+  }
+
+  .avatarBox {
+    width: 180px;
+    height: 180px;
+  }
+
+  .glassBox {
+    padding: 18px;
+  }
+
+  .glassBox h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .glassBox p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .stackGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .current_content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .contact {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .status_me {
+    font-size: 14px;
+    padding: 9px 18px;
+  }
+
+  .about::before {
+    width: 300px;
+    height: 180px;
+    filter: blur(45px);
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 50px 4%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .leftCard {
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .avatarBox {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact a {
+    width: 38px;
+    height: 38px;
+  }
+
+  .glassBox {
+    padding: 16px;
+  }
+
+  .glassBox p {
+    font-size: 13px;
+  }
+
+  .stackGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .stackItem {
+    padding: 12px 8px;
+  }
+
+  .stackItem img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stackItem span {
+    font-size: 11px;
+  }
+
+  .current_content {
+    font-size: 13px;
+  }
+
+  .about::before {
+    display: none;
+  }
+}

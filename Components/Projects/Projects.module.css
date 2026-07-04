@@ -1,0 +1,314 @@
+.Projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 10px 10px 10px;
+  gap: 20px;
+}
+.card_project {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.02),
+    0 20px 60px rgba(0, 0, 0, 0.35);
+  padding: 10px;
+}
+.card_best_project {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(91, 146, 255, 0.18),
+    0 0 70px rgba(177, 124, 255, 0.14);
+  padding: 10px;
+  margin-bottom: 67px;
+  transition: all 0.5s ease;
+}
+.card_best_project:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.42),
+    0 0 45px rgba(91, 146, 255, 0.28),
+    0 0 90px rgba(177, 124, 255, 0.22);
+  transition: all 0.5s ease;
+}
+.card_project_head {
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_project_head img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+.card_project_body {
+  padding: 10px;
+  margin-top: 5px;
+}
+.card_project_body p {
+  max-width: 280px;
+  text-align: left;
+  margin: 7px auto;
+  line-height: 1.6;
+}
+.badge_sec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.btn_view_sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.github_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  margin-top: 15px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(145, 170, 255, 0.55);
+  color: #9ab6ff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 0 20px rgba(95, 140, 255, 0.08);
+}
+.demo_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(
+    135deg,
+    #2f6dff 0%,
+    #4f7dff 30%,
+    #8b5cf6 70%,
+    #b388ff 100%
+  );
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow:
+    0 12px 28px rgba(79, 125, 255, 0.45),
+    0 0 30px rgba(179, 136, 255, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+.demo_btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(
+    135deg,
+    #4f87ff 0%,
+    #6b97ff 35%,
+    #a06bff 70%,
+    #cab2ff 100%
+  );
+  box-shadow:
+    0 16px 40px rgba(79, 125, 255, 0.55),
+    0 0 40px rgba(179, 136, 255, 0.45);
+}
+.demo_btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 80%
+  );
+  transform: translateX(-150%);
+  transition: transform 0.7s ease;
+}
+
+.github_btn:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+  border-color: #b69cff;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 125, 255, 0.18),
+    rgba(179, 136, 255, 0.18)
+  );
+  box-shadow:
+    0 12px 30px rgba(79, 125, 255, 0.25),
+    0 0 35px rgba(179, 136, 255, 0.22);
+}
+.github_btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+.github_btn svg,
+.demo_btn svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.github_btn:hover svg,
+.demo_btn:hover svg {
+  transform: rotate(-10deg) scale(1.08);
+}
+
+@media (max-width: 1024px) {
+  .Projects {
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 40px 0;
+  }
+
+  .card_project,
+  .card_best_project {
+    width: calc(50% - 12px);
+    max-width: 360px;
+    margin-bottom: 0;
+  }
+
+  .card_project_body p {
+    max-width: 100%;
+  }
+
+  .btn_view_sec {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .github_btn,
+  .demo_btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .Projects {
+    flex-direction: column;
+    margin: 35px 0;
+    gap: 24px;
+  }
+
+  .card_project,
+  .card_best_project {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 0;
+  }
+
+  .card_project_head img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card_project_body {
+    padding: 14px;
+  }
+
+  .card_project_body p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .badge_sec {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .btn_view_sec {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .github_btn,
+  .demo_btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .Projects {
+    gap: 20px;
+  }
+
+  .card_project,
+  .card_best_project {
+    border-radius: 20px;
+    padding: 8px;
+  }
+
+  .card_project_head {
+    padding: 6px;
+  }
+
+  .card_project_head img {
+    border-radius: 12px;
+  }
+
+  .card_project_body {
+    padding: 10px;
+  }
+
+  .card_project_body p {
+    font-size: 13px;
+  }
+
+  .badge_sec span {
+    font-size: 12px;
+    padding: 8px !important;
+  }
+
+  .github_btn,
+  .demo_btn {
+    font-size: 14px;
+    padding: 11px 18px;
+  }
+}
