@@ -10,10 +10,12 @@
 html {
   font-feature-settings: "ss01", "ss02", "cv01";
   scroll-behavior: smooth;
+  
 }
 body {
   color: var(--text);
   font-family: var(--font-inter);
+  overflow-x: hidden;
 }
 h1,
 h2 {
@@ -35,6 +37,7 @@ h2 {
   width: 100%;
   margin: 0 auto;
   padding-inline: 20px;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 10px;
