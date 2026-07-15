@@ -1,7 +1,7 @@
 import "./globals.css";
 import styles from "./background.module.css";
 import { Inter, Space_Grotesk } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
         </div>
 
         <main className="app-content relative z-10">{children}</main>
+        <Analytics />
       </body>
     </html>
   );

@@ -87,7 +87,7 @@ export default function Hero() {
 
           <motion.div variants={item} className={styles.actions}>
             <motion.a
-              href="/sepehr.resume.pdf"
+              href="/SepehrHasanZadehResume.pdf"
               className={styles.resume}
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.96 }}
