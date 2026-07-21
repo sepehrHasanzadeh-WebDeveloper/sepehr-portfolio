@@ -84,8 +84,8 @@ export default function Contact() {
 
           <motion.a
             href="mailto:sepehrh471@gmail.com"
-              target="_blank"
-                rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.item}
             variants={item}
             whileHover={{
@@ -105,8 +105,8 @@ export default function Contact() {
 
           <motion.a
             href="https://github.com/sepehrHasanzadeh-WebDeveloper"
-              target="_blank"
-                rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.item}
             variants={item}
             whileHover={{
@@ -125,8 +125,8 @@ export default function Contact() {
 
           <motion.a
             href="https://www.linkedin.com/in/sepehr-hasanzadeh-773267351/"
-              target="_blank"
-                rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.item}
             variants={item}
             whileHover={{
@@ -143,6 +143,28 @@ export default function Contact() {
             </div>
           </motion.a>
 
+          <motion.div
+            className={styles.item}
+            variants={item}
+            animate={{
+              boxShadow: [
+                "0 0 0px rgba(120,119,255,0)",
+                "0 0 18px rgba(120,119,255,0.25)",
+                "0 0 0px rgba(120,119,255,0)",
+              ],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+            }}
+          >
+            <span>Phone Number</span>
+
+            <div className={styles.status}>
+              <span className={styles.dot}></span>
+              09393148674
+            </div>
+          </motion.div>
           <motion.div
             className={styles.item}
             variants={item}
